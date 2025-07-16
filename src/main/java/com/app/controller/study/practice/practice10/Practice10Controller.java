@@ -5,12 +5,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class Practice10Controller {
 	@GetMapping("/practice10/A")
-	public String a() {
+	public String a(Model model) {
+		model.addAttribute("fromA","fromA");
+		//...
 		return "practice/practice10/a";
 	}
 	@GetMapping("/practice10/B")

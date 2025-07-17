@@ -80,11 +80,12 @@ public class Practice12Controller {
 //		return "practice/practice12/count";
 //	}
 //	@GetMapping("/practice12/logout")
-//	public String logout(HttpServletRequest request) {
+//	public String logout(HttpServletRequest request,HttpServletResponse response) {
 //		Cookie[] cookies = request.getCookies();
-//		MyCookieUtil.createCookieForRemove("remember");
-//		MyCookieUtil.createCookieForRemove("count");
-//		MyCookieUtil.createCookieForRemove("count");
+//		Cookie ck = MyCookieUtil.createCookieForRemove("remember");
+//		Cookie ck2 = MyCookieUtil.createCookieForRemove("count");
+//		response.addCookie(ck);
+//		response.addCookie(ck2);
 //		return "practice/practice12/count";
 //	}
 //	@PostMapping("/login")

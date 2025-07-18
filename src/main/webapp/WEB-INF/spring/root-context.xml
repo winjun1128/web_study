@@ -19,10 +19,10 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
 			<!-- RoomService roomService = new RoomServiceImpl() -->
 <!-- 			<constructor-arg ref="roomDAO"></constructor-arg> -->
 			<!--  setter 메소드를 통한 의존성 주입 -->
-			<!-- 
+			 
 				<!-- RoomService roomService = new RoomServiceImpl();
 				roomService.setRoomDAO(roomDAO); -->
-			 -->
+			 
 			<!-- <property name="roomDAO" ref="roomDAO"></property>
-	</bean>
-</beans> -->
+	</bean>-->
+</beans>

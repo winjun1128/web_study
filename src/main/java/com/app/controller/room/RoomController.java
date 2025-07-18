@@ -28,6 +28,8 @@ public class RoomController {
 		List<Room>roomList = roomService.findRoomList();
 		//화면에 보여줄 호실 데이터 -> view 데이터 전달
 		model.addAttribute("roomList",roomList);
+		
+		
 		return "room/rooms";
 	}
 }

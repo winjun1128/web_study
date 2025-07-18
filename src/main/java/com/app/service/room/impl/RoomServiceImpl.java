@@ -18,6 +18,7 @@ public class RoomServiceImpl implements RoomService {
 	@Override
 	public List<Room> findRoomList() {
 		
+		System.out.println("[Service] 호출 findRoomList ");
 		//서비스 로직 ...
 		// ...
 		

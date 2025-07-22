@@ -12,10 +12,11 @@ import com.app.service.room.RoomService;
 
 @Controller
 public class RoomController {
-	
+
 	@Autowired			//의존성 주입방법
-	RoomService roomService;
+	RoomService roomService;   
 	//스프링이 관리하는 RoomService를 주입받아서 사용하겠다
+	
 	
 	//모든 보유 호실정보를 보여주는 요청
 	@GetMapping("/rooms")
@@ -24,12 +25,11 @@ public class RoomController {
 		System.out.println("[Controller] 호출 /rooms 경로");
 		
 		//호실정보
-		
 		//Controller -> Service -> DAO
-		List<Room>roomList = roomService.findRoomList();
-		//화면에 보여줄 호실 데이터 -> view 데이터 전달
-		model.addAttribute("roomList",roomList);
+		List<Room> roomList = roomService.findRoomList();
 		
+		//화면에 보여줄 호실 데이터 -> view 데이터 전달 
+		model.addAttribute("roomList", roomList);
 		
 		return "room/rooms";
 	}

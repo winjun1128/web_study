@@ -1,18 +1,24 @@
 package com.app.controller.study.side_conception;
 
 public class MyViewResolver {
+
 	String prefix;
 	String suffix;
 	
 	public MyViewResolver() {
-		prefix="/WEB-INF/views/";
+		prefix = "/WEB-INF/views/";
 		suffix = ".jsp";
 	}
-	public String viewResove(String viewName) {
+	
+	public String viewResolve(String viewName) {
 		
-		//	viewName : mainpage
+		//  viewName : mainpage
+		
 		// "/WEB-INF/views/" + "mainpage" + ".jsp";
+
 		// /WEB-INF/views/mainpage.jsp
+		
 		return prefix + viewName + suffix;
 	}
+	
 }

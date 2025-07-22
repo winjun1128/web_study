@@ -4,17 +4,16 @@ public class Member {
 	String id;
 	String pw;
 	String name;
+	
 	public Member() {}
+	
 	public Member(String id, String pw, String name) {
 		super();
 		this.id = id;
 		this.pw = pw;
 		this.name = name;
 	}
-//	@Override
-//	public String toString() {
-//		return id + " " + pw + " "+ name;
-//	}
+	
 	public String getId() {
 		return id;
 	}
@@ -33,4 +32,5 @@ public class Member {
 	public void setName(String name) {
 		this.name = name;
 	}
+	
 }

@@ -3,6 +3,7 @@ package com.app.dto.study.practice.practice03;
 public class DrinkItem {
 	String name;
 	String type;
+	
 	public String getName() {
 		return name;
 	}
@@ -15,4 +16,5 @@ public class DrinkItem {
 	public void setType(String type) {
 		this.type = type;
 	}
+	
 }

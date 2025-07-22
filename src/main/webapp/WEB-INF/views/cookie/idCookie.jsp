@@ -8,17 +8,21 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>idCookie</h1>
 
-	<!-- <form action="/idCookie" method ="post"> -->
+	<h1>idCookie</h1>
+	
+	
+<!-- 	<form action="/idCookie" method="post"> -->
 	<form action="" method="post">
+		
 		아이디 : <input type="text" name="id" value="${remember}"> <br>
 		비번 : <input type="password" name="pw"> <br>
-		아이디 기억 <input type="checkbox" name="remember" value="true"
+		아이디 기억 <input type="checkbox" name="remember" value="true" 
 			<c:if test="${remember != null}">checked</c:if>
-		> <br>
+		 > <br>
 		
 		<button type="submit">로그인</button>
+		
 	</form>
 </body>
 </html>

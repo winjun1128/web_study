@@ -1,5 +1,7 @@
 package com.app.dao.board.impl;
 
-public class BoardDAOImpl {
+import com.app.dao.board.BoardDAO;
+
+public class BoardDAOImpl implements BoardDAO {
 
 }

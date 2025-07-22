@@ -9,6 +9,5 @@
 <body>
 	<h1>퀴즈 페이지</h1>
 	<h2>${productName} 상품 정보</h2>
-	
 </body>
 </html>

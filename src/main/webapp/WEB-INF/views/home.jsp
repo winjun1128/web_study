@@ -8,6 +8,6 @@
 </head>
 <body>
 	<h1>home</h1>
-	<h1>home</h1>
+	<h2>home</h2>
 </body>
 </html>

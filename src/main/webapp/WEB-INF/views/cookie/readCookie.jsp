@@ -8,6 +8,7 @@
 </head>
 <body>
 	<h1>readCookie</h1>
+	
 	<p>${menu}</p>
 </body>
 </html>

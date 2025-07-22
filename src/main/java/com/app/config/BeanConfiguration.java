@@ -8,26 +8,32 @@ import com.app.dao.room.impl.RoomDAOImpl;
 import com.app.service.room.RoomService;
 import com.app.service.room.impl.RoomServiceImpl;
 
+
 //@Configuration
 public class BeanConfiguration {
 
-	//스프링에 적용되는 설정들이 들어있는 클래스
+	//스프링에 적용되는 설정들이 들어있는 클래스 
 	
 	//RoomDAO roomDAO = new RoomDAOImpl();
 	
 	@Bean
-	public RoomDAO rooDAO() {
+	public RoomDAO roomDAO() {
 		return new RoomDAOImpl();
 	}
 	
 	@Bean
 	public RoomService roomService(RoomDAO roomDAO) {
-		//생성자를 통한 의존성 주입
-		//RoomServiceImpl roomService = new RoomServiceImpl(roomDAO);
 		
+		/*
+		//생성자를 통한 의존성 주입
+		RoomServiceImpl roomService = new RoomServiceImpl(roomDAO);
+		*/
+		
+		/*
 		//setter 메소드를 통한 의존성 주입
-//		RoomServiceImpl roomService = new RoomServiceImpl();
-//		roomService.setRoomDAO(roomDAO);
+		RoomServiceImpl roomService = new RoomServiceImpl();
+		roomService.setRoomDAO(roomDAO);
+		*/
 		
 		//return roomService;
 		

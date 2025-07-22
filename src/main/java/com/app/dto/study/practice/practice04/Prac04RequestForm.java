@@ -1,12 +1,10 @@
 package com.app.dto.study.practice.practice04;
 
 public class Prac04RequestForm {
+	
 	String category;
 	String product;
-	@Override
-	public String toString() {
-		return "Prac04RequestForm [category=" + category + ", product=" + product + "]";
-	}
+	
 	public String getCategory() {
 		return category;
 	}
@@ -19,4 +17,10 @@ public class Prac04RequestForm {
 	public void setProduct(String product) {
 		this.product = product;
 	}
+	
+	@Override
+	public String toString() {
+		return "Prac04RequestForm [category=" + category + ", product=" + product + "]";
+	}
+	
 }

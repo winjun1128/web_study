@@ -12,19 +12,23 @@ import com.app.dto.study.Product;
 
 @Controller
 public class ViewData01Controller {
+
 	
 	/*
-	 
-	 FE --> BE서버(Spring)				---> DB
-	 외부BE	return "view이름"
-	 (html/css/js) <--- view 자원(jsp)
-	 */
+	
+	FE 			---> BE서버(Spring)				---> DB
+	외부BE			 return "view이름"	
+	(html/css/js)	<--- view 자원(jsp)
+	*/
 	
 	@GetMapping("/viewData1")
 	public String viewData1(HttpServletRequest request) {
+		
 		//localhost:8080/viewData1?p1=aaa
+		
 		System.out.println("/viewData1 요청");
 		System.out.println(request.getParameter("p1"));
+		
 		//request.setAttribute(key, value);
 		request.setAttribute("store", "김밥천국");
 		request.setAttribute("menu", "스팸정식");
@@ -36,23 +40,23 @@ public class ViewData01Controller {
 	public String viewData2(Model model) {
 		
 		System.out.println("/viewData2 요청");
-		model.addAttribute("store","맘스터치");
-		model.addAttribute("menu","싸이버거");
+		model.addAttribute("store", "맘스터치");
+		model.addAttribute("menu", "싸이버거");
+		
 		
 		return "viewData/viewData1";
 	}
 	
 	@GetMapping("/viewData3")
-	public ModelAndView viewData3(Model model) {
+	public ModelAndView viewData3() {
 		System.out.println("/viewData3 요청");
 		ModelAndView mav = new ModelAndView();
 		
 		mav.setViewName("viewData/viewData1");
-		mav.addObject("store","달식당");
-		mav.addObject("menu","돈까스");
+		mav.addObject("store", "달식당");
+		mav.addObject("menu", "돈까스");
 		
 		return mav;
-		
 	}
 	
 	@GetMapping("/viewData4")
@@ -60,27 +64,30 @@ public class ViewData01Controller {
 		System.out.println("/viewData4 요청");
 		
 		mav.setViewName("viewData/viewData1");
-		mav.addObject("store","달식당");
-		mav.addObject("menu","김밥");
+		mav.addObject("store", "달식당");
+		mav.addObject("menu", "김밥");
 		
 		return mav;
 	}
+	
+	
 	
 	@GetMapping("/viewData5")
 	public String viewData5(Model model) {
 		
 		System.out.println("/viewData5 요청");
-		
+
 		//객체 전달
 		Product product = new Product();
 		product.setId("idid");
 		product.setName("namepp");
 		product.setPrice(9900);
 		
-		model.addAttribute("store","맘스터치");
-		model.addAttribute("menu","싸이버거");
+		model.addAttribute("store", "맘스터치");
+		model.addAttribute("menu", "싸이버거");
 		
-		model.addAttribute("product",product);
+		model.addAttribute("product", product);
+		
 		
 		return "viewData/viewData5";
 	}
@@ -90,8 +97,10 @@ public class ViewData01Controller {
 		
 		// .../viewData6?searchKeyword=커피
 		System.out.println("/viewData6 요청");
+		
 		//요청 들어온 파라미터
 		//request.getParameter(null);
+		
 		//view Data 전달
 		//request.setAttribute(key, value);
 		
@@ -99,6 +108,7 @@ public class ViewData01Controller {
 		
 		request.setAttribute("store", "오늘카페");
 		request.setAttribute("menu", "골라보세요~");
+		
 		if(searchKeyword.equals("커피")) {
 			Product product = new Product();
 			product.setId("cfe");
@@ -106,8 +116,7 @@ public class ViewData01Controller {
 			product.setPrice(2500);
 			
 			request.setAttribute("product", product);
-		}
-		else {
+		} else {
 			Product product = new Product();
 			product.setId("tea");
 			product.setName("허브티");
@@ -116,25 +125,30 @@ public class ViewData01Controller {
 			request.setAttribute("product", product);
 		}
 		
+		
 		return "viewData/viewData5";
 	}
 	
+	
 	@GetMapping("/viewData7")
 	public String viewData7(Model model, @RequestParam(required = false) String searchKeyword) {
-										//HttpServletRequest request
-										//Map<String,String> paramMap
-		
+											//HttpServletRequest request
+											//Map<String,String> paramMap
 		// .../viewData6?searchKeyword=커피
 		System.out.println("/viewData7 요청");
+		
 		//요청 들어온 파라미터
 		//request.getParameter(null);
+		
 		//view Data 전달
 		//request.setAttribute(key, value);
 		
 		//String searchKeyword = request.getParameter("searchKeyword");
 		//String searchKeyword = paramMap.get("searchKeyword");
+		
 		model.addAttribute("store", "오늘카페");
 		model.addAttribute("menu", "골라보세요~");
+		
 		if(searchKeyword.equals("커피")) {
 			Product product = new Product();
 			product.setId("cfe");
@@ -142,8 +156,7 @@ public class ViewData01Controller {
 			product.setPrice(2500);
 			
 			model.addAttribute("product", product);
-		}
-		else {
+		} else {
 			Product product = new Product();
 			product.setId("tea");
 			product.setName("허브티");
@@ -152,7 +165,21 @@ public class ViewData01Controller {
 			model.addAttribute("product", product);
 		}
 		
+		
 		return "viewData/viewData5";
 	}
-	//메소드의 키와 값이 리턴해주는 뷰에 그대로 전달이 되는건지?
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

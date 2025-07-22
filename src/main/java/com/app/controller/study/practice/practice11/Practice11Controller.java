@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class Practice11Controller {
+	
 	@GetMapping("/practice11/first")
 	public String first(Model model, HttpSession session) {
 		
@@ -27,70 +28,44 @@ public class Practice11Controller {
 		
 		return "practice/practice11/targetPage";
 	}
-//	@GetMapping("/practice11/first")
-//	public String first(Model model,HttpSession session) {
-//		
-//		if(session.getAttribute("hide3")!=null) {
-//			if(session.getAttribute("hide3").equals("true")) {
-//				model.addAttribute("accessUrl","/firsthide3");
-//				session.invalidate();
-//			}
-//		}
-//		else {
-//			model.addAttribute("accessUrl","/first");
-//		}
-//		return "practice/practice11/targetPage";
-//	}
+	
 	@GetMapping("/practice11/firsthide1")
 	public String firsthide1(Model model) {
 		
-		model.addAttribute("accessUrl","/firsthide1");
+		model.addAttribute("accessUrl", "/firsthide1");
 		
 		return "practice/practice11/targetPage";
 	}
+	
 	@GetMapping("/practice11/firsthide2")
 	public String firsthide2(Model model) {
 		
-		//model.addAttribute("accessUrl","/first");
+		//model.addAttribute("accessUrl", "/first");
 		
 		return "redirect:/practice11/first";
 		//return "practice/practice11/targetPage";
 	}
+	
 	@GetMapping("/practice11/firsthide3")
 	public String firsthide3(Model model, HttpSession session) {
-		
-		//model.addAttribute("accessUrl","/firsthide3");
+
+		//model.addAttribute("accessUrl", "/firsthide3");
 		
 		//firsthide3 에 접근했었다 라는 의미를 -> 전달 -> session 영역에 저장
-		session.setAttribute("accessUrl","/firsthide3");
+		session.setAttribute("accessUrl", "/firsthide3");
 		
 		return "redirect:/practice11/first";
 	}
-//	@GetMapping("/practice11/firsthide3")
-//	public String firsthide3(Model model, HttpSession session) {
-//		
-//		//model.addAttribute("accessUrl","/first");
-//		
-//		session.setAttribute("hide3", "true");
-//		
-//		return "redirect:/practice11/first";
-//		//return "practice/practice11/targetPage";
-//	}
+	
 }
-//public class Practice11Controller {
-//	@GetMapping("/practice11/first")
-//	public String first(Model model) {
-//		model.addAttribute("accessUrl","/first");
-//		return "/practice/practice11/targetPage";
-//	}
-//	@GetMapping("/practice11/firsthide1")
-//	public String firsthide1(Model model) {
-//		model.addAttribute("accessUrl","/firsthide1");
-//		return "/practice/practice11/targetPage";
-//	}
-//	@GetMapping("/practice11/firsthide2")
-//	public String firsthide2(Model model) {
-//		model.addAttribute("accessUrl","/first");
-//		return "redirect:/practice11/first";
-//	}
-//}
+
+
+
+
+
+
+
+
+
+
+

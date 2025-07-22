@@ -5,16 +5,16 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class Practice14Configuration {
-	
+
 	//Bean 등록 설정
 	
 	//CupBean cupBean = new CupBean();
 	@Bean
 	public CupBean cupBean(CoffeeBean coffeeBean) {
-		//Bean 의존성 주입
+		//Bean 의존성 주입 
 		
 		/*
-		//DTO 사용 개념 -> 내부 필드 변수 세팅
+		//DTO 사용 개념 -> 내부 필드변수 세팅
 		CoffeeBean coffeeBean = new CoffeeBean();
 		coffeeBean.setName("그린티라떼");
 		
@@ -22,13 +22,13 @@ public class Practice14Configuration {
 		*/
 		return new CupBean(coffeeBean);
 	}
+	
 	@Bean
 	public CoffeeBean coffeeBean() {
 		CoffeeBean coffeeBean = new CoffeeBean();
 		coffeeBean.setName("그린티라떼");
 		return coffeeBean;
 	}
-	
 	
 	//PlateBean plateBean = new PlateBean();
 	@Bean
@@ -45,3 +45,20 @@ public class Practice14Configuration {
 		return dessertBean;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

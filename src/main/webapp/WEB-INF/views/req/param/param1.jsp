@@ -8,14 +8,17 @@
 </head>
 <body>
 	<h1>param1</h1>
+	
 	<div>
+		
 		<form action="/request03/param2" method="post">
-			<input type="text" name="name"> <br>
+			<input type="text" name="name"> <br>	
 			<input type="text" name="count"> <br>
 			<button type="submit">전송</button>
 		</form>
-		
+	
 	</div>
+	
 	<div>
 		<a href="/request03/param2?name=abcname&count=998">param2로 이동</a>
 	</div>

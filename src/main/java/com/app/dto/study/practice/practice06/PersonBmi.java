@@ -1,10 +1,12 @@
 package com.app.dto.study.practice.practice06;
 
 public class PersonBmi {
+
 	String name;
 	String height;
 	String weight;
 	double bmi;
+	
 	public String getName() {
 		return name;
 	}
@@ -29,4 +31,6 @@ public class PersonBmi {
 	public void setBmi(double bmi) {
 		this.bmi = bmi;
 	}
+	
+	
 }

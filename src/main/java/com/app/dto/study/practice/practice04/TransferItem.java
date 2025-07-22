@@ -1,8 +1,11 @@
 package com.app.dto.study.practice.practice04;
 
 public class TransferItem {
+
 	String value001;
 	String value099;
+	
+	
 	public String getValue001() {
 		return value001;
 	}
@@ -15,4 +18,5 @@ public class TransferItem {
 	public void setValue099(String value099) {
 		this.value099 = value099;
 	}
+	
 }

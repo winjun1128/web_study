@@ -1,5 +1,7 @@
 package com.app.service.board.impl;
 
-public class BoardServiceImpl {
+import com.app.service.board.BoardService;
+
+public class BoardServiceImpl implements BoardService {
 
 }

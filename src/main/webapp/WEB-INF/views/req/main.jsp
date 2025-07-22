@@ -8,10 +8,13 @@
 </head>
 <body>
 	<h1>Main Page</h1>
-	
+
 	<hr>
-	<p><a href="/board/faq">FAQ 자주묻는질문</a> </p>
-	<p><a href="/board/notice">공지사항 이동</a> </p>
-	<p><a href="/member/signup">회원가입하기</a> </p>
+	<p><a href="/board/faq">FAQ 자주묻는질문</a></p>
+	<p><a href="/board/notice">공지사항 이동</a></p>
+	<p><a href="/member/signup">회원가입하기</a></p>
+	
+	
+	
 </body>
 </html>

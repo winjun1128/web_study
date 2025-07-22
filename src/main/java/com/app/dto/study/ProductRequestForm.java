@@ -5,10 +5,7 @@ public class ProductRequestForm {
 	public String name;
 	public int price;
 	public String type;
-	@Override
-	public String toString() {
-		return "ProductRequestForm [id=" + id + ", name=" + name + ", price=" + price + ", type=" + type + "]";
-	}
+	
 	public String getId() {
 		return id;
 	}
@@ -33,4 +30,10 @@ public class ProductRequestForm {
 	public void setType(String type) {
 		this.type = type;
 	}
+	@Override
+	public String toString() {
+		return "ProductRequestForm [id=" + id + ", name=" + name + ", price=" + price + ", type=" + type + "]";
+	}
+	
+	
 }

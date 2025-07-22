@@ -11,7 +11,7 @@
 	<h1>count</h1>
 	
 	<c:choose>
-		<c:when test="${empty loginId || loginId==''}">
+		<c:when test="${ empty loginId || loginId == '' }">
 			<p>익명의 사용자 환영합니다.</p>
 			<p>로그인한 사용자가 없습니다.</p>
 		</c:when>
@@ -20,9 +20,7 @@
 		</c:otherwise>
 	</c:choose>
 	
-	<p>접속횟수 : ${count} </p>
-	<%-- <h1>practice12 count</h1>
-	<p>${remember}</p>
-	<p>${count}</p> --%>
+	<p>접속횟수 : ${count}</p>
+	
 </body>
 </html>

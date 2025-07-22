@@ -8,12 +8,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-하나	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	둘
+	
+	하나  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 둘
 	<br>
 	${msg1}
 	<br>
 	${msg2}
 	<br>
+	
 <%-- 	${msgXml} --%>
 	<br>
 	
@@ -28,7 +30,7 @@
 	
 	<button id='btn'>jstl1페이지로</button>
 	
-	<c:url var="jstl1Url" value="/jstl1"/>
+	<c:url var="jstl1Url" value="/jstl1" />
 	
 	<br>
 	<a href="${jstl1Url}">jstl url</a>
@@ -37,6 +39,7 @@
 	<a href="${jstl1Url}">jstl url</a>
 	<a href="${jstl1Url}">jstl url</a>
 	
+	
 	...
 	...
 	
@@ -44,14 +47,35 @@
 	
 	<a href="${jstl1Url}">jstl url</a>
 	
-<%-- 	<c:redirect url="www.naver.com" /> --%>
+	
+	
+<%-- 	<c:redirect url="http://www.naver.com" /> --%>
 	
 	<script>
-		// location.href="http://coupang.com";
+	
+// 		location.href = "http://coupang.com";
+	
+		document.getElementById('btn').addEventListener('click', ()=>{
+			location.href = "/jstl1";
+		}) 
 		
-		document.getElementById('btn').addEventListener('click',()=>{
-			location.href="/jstl1";
-		})
 	</script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

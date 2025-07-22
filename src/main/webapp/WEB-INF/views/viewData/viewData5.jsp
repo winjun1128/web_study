@@ -10,7 +10,7 @@
 	<h1>viewData5 페이지</h1>
 	
 	<div>
-		<p>${store}</p>
+		<p>${store}</p> 
 		<p>${menu}</p>
 	</div>
 	

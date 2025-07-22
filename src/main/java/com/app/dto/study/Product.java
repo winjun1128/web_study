@@ -6,6 +6,7 @@ public class Product {
 	public int price;
 	
 	public Product() {}
+	
 	public Product(String id, String name, int price) {
 		super();
 		this.id = id;
@@ -31,8 +32,10 @@ public class Product {
 	public void setPrice(int price) {
 		this.price = price;
 	}
+	
 	@Override
 	public String toString() {
 		return "Product [id=" + id + ", name=" + name + ", price=" + price + "]";
 	}
+	
 }

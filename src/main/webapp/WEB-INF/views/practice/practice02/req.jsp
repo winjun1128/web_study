@@ -7,10 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>practice04/view</h1>
-	<p>${category}</p>
-	<p>${product}</p>
-	<p>${item.category}</p>
-	<p>${item.product}</p>
+	<h1>practice02 req</h1>
 </body>
 </html>

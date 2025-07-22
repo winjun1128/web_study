@@ -15,22 +15,42 @@ public class RoomServiceImpl implements RoomService {
 	@Autowired
 	RoomDAO roomDAO;
 	
+	/*
+	//생성자를 통한 주입
+	public RoomServiceImpl(RoomDAO roomDAO) {
+		this.roomDAO = roomDAO;
+	}
+	*/
+	
+	
+	/*
+	//setter 메소드를 통한 주입
+	public void setRoomDAO(RoomDAO roomDAO) {
+		this.roomDAO = roomDAO;
+	}
+	*/
+	
+	
+
 	@Override
 	public List<Room> findRoomList() {
 		
-		System.out.println("[Service] 호출 findRoomList ");
-		//서비스 로직 ...
-		// ...
+//		System.out.println("[Service] 호출 findRoomList");
 		
+		//서비스 로직 ... 
+		// ...
 		// DAO 를 활용해서, 실제 데이터 가져오기
 		List<Room> roomList = roomDAO.findRoomList();
+		
 		return roomList;
 	}
 
 	@Override
 	public int saveRoom(Room room) {
-		//room 정보 저장해라~ ->DAO
+		
+		//room 정보 저장해라~ -> DAO
 		int result = roomDAO.saveRoom(room);
+		
 		return result;
 	}
 

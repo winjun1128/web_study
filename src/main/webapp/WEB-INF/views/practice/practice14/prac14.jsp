@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>오류나지 않게 구색 맞춘 view</h1>
+	<h1>오류가 나지 않게 구색맞춘 View </h1>
 </body>
 </html>

@@ -11,7 +11,8 @@
 	
 	<h2>입력항목</h2>
 	
-	<form action="/practice06/result-bmi4" method="post">
+<!-- 	<form action="/practice06/result-bmi4" method="post"> -->
+	<form action="/practice06/result-bmi4" method="get">
 		이름 : <input type="text" name="name"><br>
 		키 : <input type="text" name="height"><br>
 		몸무게 : <input type="text" name="weight"><br>

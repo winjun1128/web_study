@@ -8,5 +8,6 @@
 </head>
 <body>
 	<h1>web_study</h1>
+	<h2>mainpage</h2>
 </body>
 </html>

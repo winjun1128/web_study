@@ -9,6 +9,7 @@
 <body>
 	<p>FromA</p>
 	<p>OriginalA</p>
-	<p>${fromBMsg}</p>
+<%-- 	<p>${fromBMsg}</p> --%>
+	<p>${sessionScope.fromBMsg}</p>
 </body>
 </html>

@@ -29,7 +29,7 @@ public class UserServiceImpl implements UserService {
 		//관리자 계정 추가 할때 필요한 체크 로직....
 
 		//user.setUserType("ADM");
-		user.setUserType(CommonCode.USER_USERTYPE_ADMIN);
+		user.setUserType( CommonCode.USER_USERTYPE_ADMIN );
 		int result = userDAO.saveUser(user);
 
 		return result;
@@ -40,7 +40,7 @@ public class UserServiceImpl implements UserService {
 		//사용자 계정 추가 할때 필요한 체크 로직....
 
 		//user.setUserType("CUS");
-		user.setUserType(CommonCode.USER_USERTYPE_CUSTOMER);
+		user.setUserType( CommonCode.USER_USERTYPE_CUSTOMER );
 		int result = userDAO.saveUser(user);
 
 		return result;

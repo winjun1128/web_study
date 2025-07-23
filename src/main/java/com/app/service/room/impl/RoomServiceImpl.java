@@ -35,7 +35,7 @@ public class RoomServiceImpl implements RoomService {
 	@Override
 	public List<Room> findRoomList() {
 		
-//		System.out.println("[Service] 호출 findRoomList");
+		System.out.println("[Service] 호출 findRoomList");
 		
 		//서비스 로직 ... 
 		// ...
@@ -54,16 +54,31 @@ public class RoomServiceImpl implements RoomService {
 		return result;
 	}
 
+	
 	@Override
 	public Room findRoomByRoomId(int roomId) {
+		
 		Room room = roomDAO.findRoomByRoomId(roomId);
+		
 		return room;
 	}
 
 	@Override
 	public int removeRoom(int roomId) {
+		
 		int result = roomDAO.removeRoom(roomId);
+		
 		return result;
 	}
 
 }
+
+
+
+
+
+
+
+
+
+

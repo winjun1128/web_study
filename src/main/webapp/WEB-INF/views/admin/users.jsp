@@ -8,25 +8,18 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>관리자</h1>
+	<h1>관리자 페이지</h1>
 	<h2>사용자 목록 조회</h2>
 	
-	<!-- ....  -->
-	
+	<!-- 	..... -->
 	<c:forEach var="user" items="${userList}">
-	
-		<p>${user.id} ${user.pw} ${user.name} ${user.userType} 
 		
-		<%-- <c:choose>
-			<c:when test="${user.userType == 'ADM'}">관리자</c:when>
-			<c:when test="${user.userType == 'CUS'}">사용자</c:when>
-		</c:choose> --%>
-		
-		<c:if test="${user.userType=='ADN'}">관리자</c:if>
-		<c:if test="${user.userType=='CUS'}">사용자</c:if>
-		
+		<p>${user.id} ${user.pw} ${user.name}
+			<c:if test="${user.userType == 'ADM'}">관리자</c:if>
+			<c:if test="${user.userType == 'CUS'}">사용자</c:if>
 		</p>
-	
+		
 	</c:forEach>
+		
 </body>
 </html>

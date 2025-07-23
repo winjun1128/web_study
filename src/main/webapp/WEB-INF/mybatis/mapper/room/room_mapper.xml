@@ -21,10 +21,12 @@
 		ORDER BY room_id
 	</select>
 	
+	
 	<select id="findRoomByRoomId" resultType="Room" parameterType="int">
-		select * from T_ROOM
-		where  room_id = #{roomId}
-	</select>
+		SELECT * FROM T_ROOM
+		where room_id = #{roomId}
+	</select>	
+	
 	
 	<delete id="removeRoom" parameterType="int">
 		DELETE FROM T_ROOM
@@ -32,3 +34,28 @@
 	</delete>
 	
 </mapper>		  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

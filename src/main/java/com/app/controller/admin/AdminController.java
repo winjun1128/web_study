@@ -59,23 +59,32 @@ public class AdminController {
 		
 		return "admin/rooms";		
 	}
+	
 	//roomId 식별자로 구분해서, 하나의 객실에 대한 상세정보 페이지
 	@GetMapping("/admin/room/{roomId}")
 	public String room(@PathVariable String roomId, Model model) {
+		
 		Room room = roomService.findRoomByRoomId(Integer.parseInt(roomId));
-		model.addAttribute("room",room);
+		model.addAttribute("room", room);
 		
 		return "admin/room";
 	}
-	// //admin/removeRoom?roomId=2
+	
+	
+	// /admin/removeRoom?roomId=2
 	@GetMapping("/admin/removeRoom")
 	public String removeRoom(HttpServletRequest request) {
 		
 		String roomId = request.getParameter("roomId");
+		
 		int result = roomService.removeRoom(Integer.parseInt(roomId));
-		 //if(result>0)
+		
+		//if(result > 0) 
+		
 		return "redirect:/admin/rooms";	
 	}
+	
+	
 	
 	//관리자가 사용자계정관리 -> 사용자 계정을 추가
 	@GetMapping("/admin/users/add")
@@ -103,21 +112,22 @@ public class AdminController {
 		int result = userService.saveCustomerUser(user);
 		
 		
-		if(result > 0 ) {//정상 저장 처리
+		if(result > 0 ) { //정상 저장 처리
 			return "redirect:/admin/users";
-		}
-		else{
-			return "admin/addUser";
+		} else {
+			return "admin/addUser";	
 		}
 	}
 	
 	@GetMapping("/admin/users")
 	public String users(Model model) {
 		List<User> userList = userService.findUserList();
-		model.addAttribute("userList",userList);
-		return "admin/users";
 		
+		model.addAttribute("userList", userList);
+		
+		return "admin/users";
 	}
+	
 	
 }
 

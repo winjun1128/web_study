@@ -13,11 +13,11 @@
 	
 	<p>${room.roomId} ${room.buildingName} ${room.roomNumber} ${room.floor} ${room.maxGuestCount} 
 		
-		<c:choose>
-			<c:when test="${room.viewType == 'OCN'}">오션뷰</c:when>
-			<c:when test="${room.viewType == 'CTY'}">시티뷰</c:when>
-			<c:when test="${room.viewType == 'MOT'}">마운틴뷰</c:when>
-		</c:choose>
+	<c:choose>
+		<c:when test="${room.viewType == 'OCN'}">오션뷰</c:when>
+		<c:when test="${room.viewType == 'CTY'}">시티뷰</c:when>
+		<c:when test="${room.viewType == 'MOT'}">마운틴뷰</c:when>
+	</c:choose>
 	</p>
 	
 	<div>

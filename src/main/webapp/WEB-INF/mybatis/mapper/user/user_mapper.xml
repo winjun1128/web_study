@@ -19,30 +19,37 @@
 		SELECT * FROM T_USER
 	</select>
 	
+	
 	<select id="findUserById" resultType="User" parameterType="String">
 		SELECT * 
 		FROM T_USER
-		WHERE id=#{id}
+		WHERE id = #{id}
 	</select>
+	
 	
 	<select id="checkUserLogin" resultType="User" parameterType="User">
 		SELECT * 
 		FROM T_USER
-		WHERE id = #{id} 
-		AND pw = #{pw} 
-		AND user_type = #{userType}
+		WHERE id = #{id}
+		  AND pw = #{pw}
+		  AND user_type = #{userType}
 	</select>
 	
-	<update id="updateCustomerUserPw" parameterType="User">
-		UPDATE T_USER
-		SET pw = #{pw}
-		where id=#{id}
-	</update>
 	
 	<update id="modifyUserPw" parameterType="User">
 		UPDATE T_USER
 		SET pw = #{pw}
 		WHERE id = #{id}
 	</update>
+	
+	
+	<update id="modifyUser" parameterType="User">
+		UPDATE T_USER
+		SET pw = #{pw},
+			name = #{name},
+			user_type = #{userType}
+		WHERE id = #{id}
+	</update>
+	
 	
 </mapper>

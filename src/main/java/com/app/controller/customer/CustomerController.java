@@ -1,5 +1,6 @@
 package com.app.controller.customer;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -103,4 +104,54 @@ public class CustomerController {
 		session.invalidate();
 		return "redirect:/main";
 	}
+	
+	@GetMapping("/customer/modifyPw")
+	public String modifyPw() {
+		
+	
+		return "customer/modifyPw";
+	}
+	@PostMapping("/customer/modifyPw")
+	public String modifyPwAction(User user,HttpSession session) {
+		
+		//세션 로그인 사용자 ID
+		//화면에서 전달된 변경할 pw -> User
+		
+		// 비밀번호 변경 처리(user) Service -> DAO -> mapper sql
+		// set pw = ?
+		// where id = ?
+		// User 전체 update -> 기존정보는 유지 + 변경할 비밀번호
+		
+		// 특정 id의 비밀번호만 update
+		user.setId((String)session.getAttribute("loginUserId"));
+		
+		System.out.println("비밀번호 변경에 사용할 user 객체");
+		System.out.println(user);
+		
+		int result = userService.modifyUserPw(user);
+		
+		if(result>0) {
+			return "redirect:/customer/mypage";
+		}
+		else {
+			return "customer/modifyPw";
+		}
+	}
+//	@PostMapping("/customer/modifyPw")
+//	public String modifyPwAction(HttpSession session,Model model,HttpServletRequest request) {
+//		if(session.getAttribute("loginUserId")!=null) {	//로그인이 된 상태
+//			
+//			String updateUserId = (String)session.getAttribute("loginUserId");
+//				
+//			User updateuser = userService.findUserById(updateUserId);
+//			
+//			updateuser.setPw(request.getParameter("updatepw").toString());
+//				
+//			int result = userService.updateCustomerUserPw(updateuser);
+//			
+//			model.addAttribute("user",updateuser);
+//		
+//		}
+//		return "redirect:/main";
+//	}
 }

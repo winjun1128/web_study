@@ -14,5 +14,14 @@
 	<p>
 		<a href="/main">메인페이지로 이동</a>
 	</p>
+	<p>
+		<a href="/customer/modifyPw">비번변경으로 이동</a>
+	</p>
+	<button id="btn_modifyPw">비밀번호 변경</button>
+	<script>
+		document.getElementById('btn_modifyPw').addEventListener('click',()=>{
+			location.href = '/customer/modifyPw';
+		})
+	</script>
 </body>
 </html>

@@ -17,4 +17,8 @@ public interface UserService {
 	public User findUserById(String id);
 	
 	public User checkUserLogin(User user);
+	
+	public int updateCustomerUserPw(User user);
+	
+	public int modifyUserPw(User user);
 }

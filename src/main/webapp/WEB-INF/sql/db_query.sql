@@ -1,4 +1,4 @@
-CREATE TABLE T_ROOM (
+--CREATE TABLE T_ROOM (
 	room_id NUMBER Primary key,
 	building_name VARCHAR2(32) NOT NULL,
 	room_number NUMBER(6) NOT NULL,

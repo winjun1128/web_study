@@ -30,7 +30,8 @@
 	</beans:bean>
 
 	<resources location="/resources/" mapping="/**"></resources>
-
+	<!-- <resources location="/resources/js" mapping="/js/**"></resources> -->
+	<!-- <resources location="/resources/css" mapping="/css/**"></resources> -->
 	<annotation-driven>
 		<message-converters>
 			<!-- @ResponseBody로 String 처리할때 한글처리 -->
@@ -47,6 +48,20 @@
 			</beans:bean>
 		</message-converters>
 	</annotation-driven>
-
+	
+	<interceptors>
+		<interceptor>
+			<mapping path="/**"/>
+			<exclude-mapping path="/customer/signin"/>
+			<exclude-mapping path="/customer/signup"/>
+			<exclude-mapping path="/customer/checkDupIdJson"/>
+			<exclude-mapping path="/"/>
+			<exclude-mapping path="/main"/>
+			<exclude-mapping path="/css/**"/>
+			<exclude-mapping path="/js/**"/>
+			<exclude-mapping path="/image/**"/>
+			<beans:bean class="com.app.interceptor.LoginInterceptor"></beans:bean>
+		</interceptor>
+	</interceptors>
 
 </beans:beans>
